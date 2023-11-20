@@ -44,7 +44,7 @@
                 <!-- To make this form functional, sign up at-->
                 <!-- https://startbootstrap.com/solution/contact-forms-->
                 <!-- to get an API token!-->
-                <form id="loginForm" data-sb-form-api-token="API_TOKEN">
+                <form method="post" id="loginForm" action="<?= base_url(); ?>login">
                     <!-- ID input-->
                     <div class="form-floating mb-3">
                         <input class="form-control" id="email" type="text" data-sb-validations="required" />
@@ -59,9 +59,8 @@
                     </div>
                     <!-- Login Button-->
                     <div class="d-grid">
-                        <a href="<?= base_url('/home/siswa'); ?>" class="btn btn-primary btn-xl" id="loginButton" type="submit">
-                            Login
-                        </a>
+                        <!-- <a href="<?= base_url('/home/siswa'); ?>" class="btn btn-primary btn-xl" id="loginButton" type="submit"> -->
+                        <button type="submit" class="btn btn-primary btn-xl" id="loginButton">Login</button>
                     </div>
                 </form>
             </div>

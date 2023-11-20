@@ -34,7 +34,12 @@ $routes->get('/', 'Welcome\Welcome::index');
 
 //route auth
 $routes->get('/register', 'Auth\Register::index');
+$routes->post('/register/process', 'Auth\Register');
 $routes->get('/login', 'Auth\Auth::index');
+$routes->post('/login/process', 'Auth\Auth::process');
+
+$routes->match(['get', 'post'], '/register', 'Auth\Register::process');
+$routes->match(['get', 'post'], '/login', 'Auth\Auth::process');
 
 //route home
 $routes->get('/home/guru', 'Home\Guru::index');

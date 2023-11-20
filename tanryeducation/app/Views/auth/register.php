@@ -44,28 +44,28 @@
                 <!-- To make this form functional, sign up at-->
                 <!-- https://startbootstrap.com/solution/contact-forms-->
                 <!-- to get an API token!-->
-                <form id="regisForm" data-sb-form-api-token="API_TOKEN">
-                    <!-- Email Siswa input -->
+                <form method="POST" id="regisForm" action="<?= base_url('/register'); ?>">
+                    <!-- Nama Siswa input -->
                     <div class="form-floating mb-3">
-                        <input class="form-control" id="emailsiswa" type="text" data-sb-validations="required" />
-                        <label for="siswaemail">Email Siswa</label>
-                        <div class="invalid-feedback" data-sb-feedback="email:required">An Email is required.</div>
+                        <input class="form-control" id="namasiswa" type="text" required data-sb-validations="required" />
+                        <label for="siswanama">Nama Siswa</label>
+                        <div class="invalid-feedback" data-sb-feedback="name:required">Name is required.</div>
                     </div>
                     <!-- Email Orang Tua input -->
                     <div class="form-floating mb-3">
-                        <input class="form-control" id="emailortu" type="text" data-sb-validations="required" />
-                        <label for="ortuemail">Email Orang Tua</label>
-                        <div class="invalid-feedback" data-sb-feedback="email:required">An Email is required.</div>
+                        <input class="form-control" id="email" type="text" required data-sb-validations="required" />
+                        <label for="email">Email Siswa/Orang Tua</label>
+                        <div class="invalid-feedback" data-sb-feedback="email:required">Email is required.</div>
                     </div>
                     <!-- Password input -->
                     <div class="form-floating mb-3">
-                        <input class="form-control" id="password" type="password" data-sb-validations="required" />
+                        <input class="form-control" id="password" type="password" required data-sb-validations="required" />
                         <label for="password">Password</label>
-                        <div class="invalid-feedback" data-sb-feedback="password:required">A password is required.</div>
+                        <div class="invalid-feedback" data-sb-feedback="password:required">Password is required.</div>
                     </div>
                     <!-- Register Button -->
                     <div class="d-grid">
-                        <a href="<?= base_url('/home/siswa'); ?>" class="btn btn-primary btn-xl" id="regisButton" type="submit">Register</a>
+                        <button type="submit" class="btn btn-primary btn-xl" id="regisButton">Register</button>
                     </div>
                 </form>
             </div>
